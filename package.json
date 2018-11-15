@@ -12,5 +12,6 @@
     "express": "^4.16.4",
     "path": "^0.12.7",
     "socket.io": "^2.1.1"
-  }
+  },
+  "repository": "https://github.com/DavidCorral94/CodeshareUCA"
 }
