@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Codeshare UCA</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <br>
+                <textarea class="form-control" rows="25" id="code"></textarea>
+                <br>
+                <button class="btn btn-primary" onclick="sendCode()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    let socket = io();
+    socket.on('newMessage', function (msg) {
+        console.log('message: ' + msg);
+    });
+
+    function sendCode() {
+        let code = $('#code').val();
+        console.log('Sending', code);
+        socket.emit('newCode', code);
+    }
+</script>
+</body>
+</html>
