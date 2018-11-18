@@ -8,3 +8,10 @@
 .form-control:disabled, .form-control[readonly] {
     background: transparent;
 }
+
+textarea {
+    background: url(../img/bg-lines.png) no-repeat local !important;
+    padding-left: 35px !important;
+    padding-top: 10px !important;
+    border-color:#ccc !important;
+}

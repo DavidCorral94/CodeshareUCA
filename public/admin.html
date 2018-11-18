@@ -6,18 +6,18 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="form-group">
-                <br>
-                <textarea class="form-control" rows="25" id="code"></textarea>
-                <br>
-                <button class="btn btn-primary" onclick="sendCode()">Submit</button>
-            </div>
+            <h1 class="text-center">Welcome to Codeshare UCA</h1>
+            <h5 class="text-center">Developed by <a href="https://stackoverflow.com/users/5582307/david-corral">David
+                Corral</a>.
+                Source code available at <a href="https://github.com/DavidCorral94/CodeshareUCA">GitHub</a>.</h5>
+            <textarea class="form-control" rows="25" id="code" onkeyup="sendCode()"></textarea>
         </div>
     </div>
 </div>
